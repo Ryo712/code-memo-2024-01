@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Year App</title>
+</head>
+<body>
+
+  <h1>New Year Countdown App</h1>
+  <p>Click the button to reveal the New Year message!</p>
+
+  <!-- ボタンを押すと showMessage 関数が呼ばれる -->
+  <button onclick="showMessage()">Show New Year Message</button>
+
+  <!-- メッセージを表示する領域 -->
+  <div id="newYearMessage" style="display: none; margin-top: 20px; padding: 10px; background-color: #dff0d8; border: 1px solid #3c763d; border-radius: 4px;">
+    <p>Happy New Year! 2024!</p>
+  </div>
+
+  <script>
+    // ボタンがクリックされたときに呼ばれる関数
+    function showMessage() {
+      // メッセージを表示する要素を取得
+      var messageElement = document.getElementById("newYearMessage");
+
+      // メッセージを表示
+      messageElement.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
