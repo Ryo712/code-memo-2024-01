@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--meta name~:これにより、モバイルデバイスに対応させるための基本的な設定がされています。-->  
+  <title>Text変換ボタン</title>
+</head>
+<body>
+
+  <h1 id="message">誰ですか？</h1>
+  <button onclick="changeText()">変換する</button>
+<!--ページにボタンが表示されており、クリックされるとchangeTextというJavaScript関数が呼び出されます。-->
+  <script>
+    function changeText() { //テキストを変更するJavaScript関数です。
+      var messageElement = document.getElementById('message'); //idがmessageである要素を取得し、その要素のtextContentプロパティを変更しています。
+      messageElement.textContent = 'たーやが？';
+    }
+  </script>
+
+</body>
+</html>
+<!--ボタンがクリックされたときに実行され、テキストが「たーやが？」に変更されます。-->
