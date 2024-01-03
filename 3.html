@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>テキスト変換アプリ</title>
+  <style>
+    body {
+      transition: background-color 0.5s ease;
+    }
+    .dark-mode {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="message">M-1優勝は・・・</h1>
+  <button onclick="changeText()">答えは？</button>
+  <button onclick="toggleDarkMode()">ダークモード切り替え</button>
+<!--toggleDarkMode:関数の呼び出し-->
+  <script>
+    function changeText() {
+      var messageElement = document.getElementById('message');
+      var currentText = messageElement.textContent;
+
+      if (currentText === 'M-1優勝は・・・') {
+        messageElement.textContent = '令和ロマン！';
+      } else {
+        messageElement.textContent = 'M-1優勝は・・・';
+      }
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+<!--document.bodyのクラスリストにdark-modeクラスをトグル（追加または削除）する-->
+</body>
+</html>
